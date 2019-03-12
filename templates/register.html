@@ -1,0 +1,117 @@
+
+
+{% block body %}
+<html>
+<title>Registration</title>
+<style>
+input[type=text], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[name=p], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[name=cp], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text], select {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 25%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button] {
+  width: 25%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #FFBB33;
+  padding: 100px;
+}
+</style>
+ <center>
+     <h1>
+        <center><b><br>Registration</b></center>
+    </h1>
+
+    {% from "include/_formhelpers.html" import render_field%}
+    <form method="POST" action="">
+        <div>
+              <label>Name :</label>
+                 <center><input type="text" name="n" required></center>
+                 <br>
+              <label>Email :</label>
+                 <center><input type="text" name="e" required></center>
+                 <br>
+              <label>Username :</label>
+                 <center><input type="text" name="un" required></center>
+                 <br>
+              <label>Password :</label>
+                 <center><input type="password" name="p" required></center>
+                 <br>
+              <label>Confirm Password :</label>
+                <center><input type="password" name="cp" required></center>
+                <br>
+
+            <!-- <select name="imp" required>
+
+                <option value=1>MINISTRY</option>
+                <option value=2>THIRD PARTY</option>
+                <option value=3>MINE</option>
+                <option value=4>LAB</option>
+            </select> -->
+                <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+
+            <input type="button" class="btn btn-primary" value="Lab Names" onclick="window.location.href='http://127.0.0.1:5000/lab_names'" >
+         </div>
+
+    </form>
+     </center>
+
+{% endblock %}

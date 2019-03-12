@@ -1,0 +1,48 @@
+<html>
+<head><title>Ministry of Coal</title>
+    <!--<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='start_page.css')}}">-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <style>
+        body
+            {
+                 background: url('/static/images/coal.jpg');
+                 background-repeat: no-repeat;
+                 background-size: 100% 100%;
+                 margin: 0 auto;
+            }
+
+    </style>
+</head>
+<body>
+{% from "include/_formhelpers.html" import render_field%}
+<div>
+    <img style="width: 120px;
+                height: 120px;
+                margin: 70px 100px 200px 650px;" src="static/images/coallogo.jpg">
+    <center><h1 style="color: #ffffff;
+                letter-spacing: 6px;
+                text-shadow: 3px 2px grey;
+                font-size: 60px;
+                position: absolute;
+                top: 25%;
+                left: 18%;
+                font-style: bold;">Ministry of Coal, Welcome you</h1></center>
+    <center><h4 style="color: #ffffff;
+                letter-spacing: 10px;
+                font-size: 30px;
+                position: absolute;
+                top: 40%;
+                left: 40%;">Login as:</h4></center>
+    <center>
+
+        <form>
+            <!-- <input type="button" name="Ministry" value="Transportation" onclick="window.location.href='http://127.0.0.1:5000/loginministry'"><br><br> -->
+            <input type="button" name="Third" value="Third Party" onclick="window.location.href='http://127.0.0.1:5000/loginthird'"><br><br>
+            <input type="button" name="Mine" value="Mine" size="10*10" onclick="window.location.href='http://127.0.0.1:5000/loginmine'"><br><br>
+            <input type="button" name="Lab" value="Lab" onclick="window.location.href='http://127.0.0.1:5000/loginlab'">
+        </form>
+
+    </center>
+</div>
+</body>
+</html>

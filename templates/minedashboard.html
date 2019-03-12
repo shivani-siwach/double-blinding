@@ -1,0 +1,60 @@
+{% block body %}
+      <center><h3>Welcome {{session.us}}</h3></center>
+{% endblock %}
+<!DOCTYPE html>
+<html>
+<title>Mine dashboard</title>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<div>
+  <form action="/minedashboard" method = "POST">
+    <label>CODE :</label>
+    <input type="text" name="code" placeholder="code :" required>
+    <label>BUYER :</label>
+    <input type="text" name="buyer" placeholder="buyer :" required>
+    <label>RECK (R.I.D) :</label>
+    <input type="text" name="reck" placeholder="r.i.d :" required>
+     <label>DECLARED GRADE :</label>
+    <input type="text" name="grade" placeholder="grade :" required>
+    <label>UNIT CODE :</label>
+    <input type="text" name="ucode" placeholder="unit code :" required>
+     <label>QUANTITY :</label>
+    <input type="number"  name="quantity" placeholder="quantity :" required>
+  <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+  </form>
+</div>
+
+</body>
+</html>
